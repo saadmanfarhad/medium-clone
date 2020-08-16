@@ -1,12 +1,11 @@
 const mongoose = require("mongoose");
 
 let UserSchema = new mongoose.Schema({
+  googleID: String,
   name: String,
   email: String,
   provider: String,
-  provider_id: String,
-  token: String,
-  provider_pic: String,
+  profile_pic: String,
   followers: [
     {
       type: mongoose.Schema.Types.ObjectId,
